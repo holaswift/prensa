@@ -1,0 +1,258 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#F7F7F7">
+<title>Prensa · hola Swift</title>
+<meta name="description" content="Kit de prensa de hola Swift, la comunidad de Swift en español: quiénes somos, datos, logotipos, imágenes, vídeos y contacto.">
+<link rel="icon" href="/favicon.ico" sizes="32x32">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
+<link rel="canonical" href="https://holaswift.com/prensa/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="hola Swift">
+<meta property="og:locale" content="es_ES">
+<meta property="og:url" content="https://holaswift.com/prensa/">
+<meta property="og:title" content="Prensa · hola Swift">
+<meta property="og:description" content="Quiénes somos, datos, logotipos, imágenes, vídeos y contacto de prensa.">
+<meta property="og:image" content="https://holaswift.com/og.jpg">
+<meta property="og:image:type" content="image/jpeg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@hola_swift">
+<style>
+@font-face{font-family:"Inter";src:url(/assets/fuentes/inter-400.woff2) format("woff2");font-weight:400;font-display:swap}
+@font-face{font-family:"Inter";src:url(/assets/fuentes/inter-600.woff2) format("woff2");font-weight:600;font-display:swap}
+@font-face{font-family:"Inter Display";src:url(/assets/fuentes/inter-display-600.woff2) format("woff2");font-weight:600;font-display:swap}
+@font-face{font-family:"Inter Display";src:url(/assets/fuentes/inter-display-700.woff2) format("woff2");font-weight:700;font-display:swap}
+/* tokens del libro de marca hola Swift (los mismos que la web) */
+:root{--fondo:#F7F7F7;--superficie:#FFFFFF;--linea:#E3E3E8;--texto:#111111;--texto-2:#55555F;--texto-3:#6E6E78;
+  --enlace:#0066CC;--interfaz:#007AFF;--boton:#0071E3;
+  --f-titulos:"Inter Display","Inter",system-ui,sans-serif;--f-texto:"Inter",system-ui,sans-serif;
+  --ease-out:cubic-bezier(.16,1,.3,1);color-scheme:light;
+  --sa-l:env(safe-area-inset-left,0px);--sa-r:env(safe-area-inset-right,0px);--sa-t:env(safe-area-inset-top,0px);--sa-b:env(safe-area-inset-bottom,0px)}
+*{box-sizing:border-box}
+[hidden]{display:none!important}
+html{scroll-padding-top:88px}
+body{margin:0;background:var(--fondo);color:var(--texto);font:17px/26px var(--f-texto);-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+a{color:var(--enlace);text-underline-offset:3px}
+:focus-visible{outline:2px solid var(--interfaz);outline-offset:3px;border-radius:12px}
+.saltar{position:fixed;left:16px;top:-60px;z-index:100;background:var(--superficie);color:var(--texto);padding:10px 16px;border-radius:999px;font:600 14px/1 var(--f-texto);text-decoration:none;border:1px solid var(--linea);transition:top .2s}
+.saltar:focus{top:calc(12px + var(--sa-t))}
+.wrap{width:min(1120px,100% - max(16px,var(--sa-l)) - max(16px,var(--sa-r)));margin-inline:auto}
+/* barra */
+nav.top{position:sticky;top:0;z-index:20;background:rgba(247,247,247,.86);-webkit-backdrop-filter:saturate(1.6) blur(14px);backdrop-filter:saturate(1.6) blur(14px);border-bottom:1px solid transparent;padding-top:var(--sa-t)}
+nav.top.solida{border-bottom-color:var(--linea)}
+nav.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;height:64px}
+nav.top img{display:block;height:30px;width:auto}
+nav.top .acciones{display:flex;align-items:center;gap:20px}
+nav.top .volver{font-size:15px;color:var(--texto-2);text-decoration:none}
+nav.top .volver:hover{color:var(--texto)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:6px;height:40px;padding:0 18px;border-radius:999px;border:0;background:var(--boton);color:#fff;font:600 15px/1 var(--f-texto);text-decoration:none;white-space:nowrap;transition:background .2s}
+.btn:hover{background:#0062CC}
+.btn.sec{background:var(--superficie);color:var(--texto);border:1px solid var(--linea)}
+.btn.sec:hover{background:#F2F2F5}
+/* cabecera */
+.cab{padding:clamp(40px,8vh,96px) 0 clamp(32px,6vh,64px)}
+.cab .wrap{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.05fr);gap:clamp(24px,5vw,64px);align-items:center}
+.ceja{font:600 15px/20px var(--f-texto);color:var(--texto-3);margin:0 0 14px}
+h1{font:700 clamp(40px,5.6vw,64px)/1 var(--f-titulos);letter-spacing:-.03em;margin:0;text-wrap:balance}
+.lede{font-size:clamp(19px,1.7vw,21px);line-height:1.45;color:var(--texto-2);margin:20px 0 0;max-width:34ch;text-wrap:pretty}
+.cab .cta{display:flex;flex-wrap:wrap;gap:10px;margin-top:28px}
+.logo3d{width:100%;height:auto;display:block}
+/* secciones */
+section{padding:clamp(40px,7vh,80px) 0}
+h2{font:700 clamp(30px,3.4vw,40px)/1.08 var(--f-titulos);letter-spacing:-.02em;margin:0;text-wrap:balance}
+.intro{color:var(--texto-2);margin:12px 0 0;max-width:56ch;text-wrap:pretty}
+.tarjeta{background:var(--superficie);border-radius:28px;padding:clamp(24px,4vw,48px)}
+/* sobre hola Swift */
+.sobre{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.4fr);gap:clamp(24px,5vw,72px);align-items:start}
+.sobre .texto p{margin:0 0 16px;max-width:62ch}
+.sobre .texto p:first-child{font:600 21px/30px var(--f-texto);letter-spacing:-.005em}
+.sobre .firma{color:var(--texto-2);font-size:15px;margin-top:24px}
+/* datos */
+.datos{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0 40px;margin:28px 0 0}
+.datos div{padding:16px 0;border-top:1px solid var(--linea)}
+.datos dt{font:500 13px/16px var(--f-texto);letter-spacing:.01em;color:var(--texto-3);margin-bottom:6px}
+.datos dd{margin:0;font-weight:600}
+.datos dd .sec{display:block;font-weight:400;color:var(--texto-2);font-size:15px;line-height:22px;margin-top:2px}
+/* recursos */
+.recursos{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;margin-top:32px;padding:0;list-style:none}
+.recurso{position:relative;background:var(--superficie);border-radius:28px;padding:28px;display:flex;flex-direction:column;min-height:240px}
+.recurso img{width:auto;height:64px;align-self:flex-start}
+.recurso h3{font:600 22px/28px var(--f-titulos);letter-spacing:-.01em;margin:24px 0 6px}
+.recurso p{margin:0 0 20px;color:var(--texto-2);font-size:15px;line-height:22px;flex:1}   /* el texto empuja el enlace al fondo: los títulos quedan alineados entre tarjetas */
+.recurso .abrir{align-self:flex-start;font:600 15px/1 var(--f-texto);color:var(--enlace);text-decoration:none}
+.recurso .abrir::after{content:"";position:absolute;inset:0;border-radius:28px}
+.recurso .abrir:hover{text-decoration:underline}
+.recurso:has(.abrir:focus-visible){outline:2px solid var(--interfaz);outline-offset:3px}
+.recurso .abrir:focus-visible{outline:none}
+.recurso .pronto{font:500 13px/16px var(--f-texto);color:var(--texto-3)}
+.nota-drive{color:var(--texto-3);font-size:15px;margin:20px 0 0}
+/* marca */
+.reglas{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px;margin:32px 0 0;padding:0;list-style:none;counter-reset:r}
+.reglas li{background:var(--superficie);border-radius:22px;padding:24px;counter-increment:r}
+.reglas li::before{content:counter(r);display:grid;place-items:center;width:28px;height:28px;border-radius:999px;background:var(--fondo);font:600 14px/1 var(--f-texto);margin-bottom:16px}
+.reglas b{display:block;font:600 17px/24px var(--f-texto);margin-bottom:6px}
+.reglas span{color:var(--texto-2);font-size:15px;line-height:22px}
+.mas-marca{margin:20px 0 0;font-size:15px}
+/* contacto */
+.contacto{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:24px}
+.contacto .mail{font:700 clamp(24px,3vw,32px)/1.1 var(--f-titulos);letter-spacing:-.015em;color:var(--texto);text-decoration:none;word-break:break-all}
+.contacto .mail:hover{color:var(--enlace)}
+.falta{border:1px dashed #A5A5AF;border-radius:6px;padding:0 6px;color:var(--texto-2);font:inherit}
+/* pie */
+footer{padding:48px 0 calc(72px + var(--sa-b));border-top:1px solid var(--linea);font-size:14px;line-height:1.5;color:var(--texto-2)}
+footer .wrap{display:flex;flex-wrap:wrap;gap:12px 32px;justify-content:space-between}
+footer nav{display:flex;flex-wrap:wrap;gap:20px}
+footer a{color:var(--texto-2);text-decoration:none}
+footer a:hover{color:var(--texto)}
+footer p{margin:0;max-width:60ch}
+/* aparición */
+.reveal{opacity:0;transform:translateY(12px);transition:opacity .8s var(--ease-out),transform .8s var(--ease-out)}
+.reveal.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}}
+@media (max-width:900px){.recursos{grid-template-columns:repeat(2,minmax(0,1fr))}.reglas{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:760px){
+  .cab .wrap,.sobre{grid-template-columns:1fr}
+  .cab .arte{order:-1;max-width:520px}
+  .datos{grid-template-columns:1fr}
+  nav.top .volver{display:none}
+}
+@media (max-width:560px){.recursos,.reglas{grid-template-columns:1fr}.recurso{min-height:0}.recurso img{height:52px}}
+</style>
+</head>
+<body>
+<a class="saltar" href="#contenido">Saltar al contenido</a>
+<nav class="top" aria-label="Principal">
+  <div class="wrap">
+    <a href="/" aria-label="hola Swift, inicio"><img src="/assets/img/logo-horizontal-color.webp" alt="hola Swift" width="108" height="30"></a>
+    <div class="acciones"><a class="volver" href="/">← Volver a hola Swift</a><a class="btn" href="#contacto">Contacto de prensa</a></div>
+  </div>
+</nav>
+
+<main id="contenido">
+  <header class="cab">
+    <div class="wrap">
+      <div>
+        <p class="ceja">Prensa</p>
+        <h1>hola Swift, para la prensa.</h1>
+        <p class="lede">Quiénes somos, los datos, los recursos de marca y una línea directa con quienes lo organizan.</p>
+        <div class="cta"><a class="btn" href="https://github.com/holaswift/prensa/releases/download/descargas/holaswift-prensa.zip" download>Descargar todo (ZIP)</a><a class="btn sec" href="#recursos">Ver recursos</a></div>
+      </div>
+      <div class="arte"><img class="logo3d" src="/assets/img/logo-3d.webp" alt="hola Swift! en letras de tubo 3D de colores" width="1400" height="1019"></div>
+    </div>
+  </header>
+
+  <section id="sobre">
+    <div class="wrap tarjeta sobre reveal">
+      <h2>Sobre hola Swift.</h2>
+      <div class="texto">
+        <p>hola Swift es la comunidad de Swift en español: un sitio para quienes crean con Swift y las plataformas de Apple y quieren aprender, compartir y conocerse en su idioma.</p>
+        <p>Organiza quedadas y talleres online, en directo y en español, en su servidor de Discord. Y prepara un encuentro en persona para verse las caras.</p>
+        <p>La impulsan Jon Ander Orcera, Project Manager de Apple Coding Academy, y Alejandro Mohamad, desarrollador de apps para plataformas Apple desde 2014, junto a un grupo de embajadores de la comunidad. Nace de una idea: detrás de cada gran app hay personas.</p>
+        <p><a href="/#carta">Lee el manifiesto →</a></p>
+        <p class="firma">Jon Ander y Ale, founders de hola Swift</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="datos">
+    <div class="wrap reveal">
+      <h2>Datos rápidos.</h2>
+      <dl class="datos">
+        <div><dt>Nombre</dt><dd>hola Swift<span class="sec">Dos palabras: "hola" en minúscula y "Swift" con mayúscula.</span></dd></div>
+        <div><dt>Qué es</dt><dd>La comunidad de Swift en español</dd></div>
+        <div><dt>Founders</dt><dd>Jon Ander Orcera y Alejandro Mohamad</dd></div>
+        <div><dt>Embajadores</dt><dd>8 personas de la comunidad<span class="sec">Alberto Luis Badía, Arturo Rivas Arias, Asier G. Morato, Julio César Fernández Muñoz, Luis Escámez Sánchez, María Clotilde Soriano, Patricia Bedoya y Pol Piella Abadia</span></dd></div>
+        <div><dt>Formato</dt><dd>Quedadas y talleres online, en directo<span class="sec">En Discord. Encuentro en persona en preparación.</span></dd></div>
+        <div><dt>Idioma</dt><dd>Español</dd></div>
+        <div><dt>La web</dt><dd>Hecha en Swift<span class="sec">Lo interactivo corre en el navegador con Swift compilado a WebAssembly.</span></dd></div>
+        <div><dt>Lanzamiento</dt><dd>1 de diciembre de 2026</dd></div>
+        <div><dt>Web y redes</dt><dd><a href="https://holaswift.com/">holaswift.com</a> · @hola_swift<span class="sec">X, Mastodon, LinkedIn, Instagram y Threads. En Bluesky, @holaswift.com</span></dd></div>
+      </dl>
+    </div>
+  </section>
+
+  <section id="recursos">
+    <div class="wrap">
+      <div class="reveal">
+        <h2>Todo lo que necesitas para hablar de hola Swift.</h2>
+        <p class="intro">Nota de prensa, logotipos, imágenes y vídeos, listos para usar. Cada tarjeta descarga un ZIP; si prefieres ver los archivos uno a uno, están en <a href="https://github.com/holaswift/prensa" target="_blank" rel="noopener">GitHub</a>. Si echas algo en falta, pídenoslo y lo preparamos.</p>
+      </div>
+      <ul class="recursos" id="lista-recursos"></ul>
+    </div>
+  </section>
+
+  <section id="marca">
+    <div class="wrap">
+      <div class="reveal">
+        <h2>Cómo usar la marca.</h2>
+        <p class="intro">Cuatro reglas para que hola Swift se vea siempre igual.</p>
+      </div>
+      <ul class="reglas">
+        <li class="reveal"><b>Se escribe hola Swift.</b><span>Dos palabras: "hola" en minúscula y "Swift" con mayúscula. En redes somos @hola_swift.</span></li>
+        <li class="reveal"><b>El logo, tal cual.</b><span>Sin cambiar los colores del "hola", sin estirarlo y sin sombras ni contornos.</span></li>
+        <li class="reveal"><b>Con aire.</b><span>Deja alrededor del logo, como mínimo, el alto de la "o" libre de texto y bordes.</span></li>
+        <li class="reveal"><b>Independiente.</b><span>hola Swift no tiene relación oficial con Apple. Swift y Apple son marcas de Apple Inc.</span></li>
+      </ul>
+      <p class="mas-marca reveal">¿Necesitas más detalle? Consulta el <a href="https://github.com/holaswift/prensa#cómo-usar-el-logo" target="_blank" rel="noopener">kit de prensa</a>.</p>
+    </div>
+  </section>
+
+  <section id="contacto">
+    <div class="wrap tarjeta contacto reveal">
+      <div>
+        <h2>Contacto de prensa.</h2>
+        <p class="intro">Entrevistas, datos o materiales que no estén aquí: escríbenos y te contestamos directamente.</p>
+      </div>
+      <p id="mail-prensa"></p>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <nav aria-label="Legal"><a href="/">Inicio</a><a href="/prensa/" aria-current="page">Prensa</a><a href="/aviso-legal">Aviso legal</a><a href="/privacidad">Privacidad</a><a href="/cookies">Cookies</a></nav>
+    <p>hola Swift es una comunidad independiente, sin relación oficial con Apple Inc. Swift y Apple son marcas de Apple Inc.</p>
+  </div>
+</footer>
+
+<script>
+  // ─── EDITABLE ──────────────────────────────────────────────────────────────
+  // Email de prensa. Vacío: se ve un hueco marcado para rellenar.
+  const EMAIL_PRENSA = 'prensa@holaswift.com';
+  // ZIP de cada carpeta del repositorio público github.com/holaswift/prensa. Los genera su GitHub Action en la release "descargas".
+  // Con url vacía, la tarjeta dice "Muy pronto".
+  const RECURSOS = [
+    { titulo: 'Nota de prensa',   texto: 'El anuncio oficial, listo para citar.',                          url: 'https://github.com/holaswift/prensa/releases/download/descargas/nota-de-prensa.zip', glifo: 'arroba' },
+    { titulo: 'Logotipo',         texto: 'El logo en color, negro y blanco, en SVG y PNG transparente.',  url: 'https://github.com/holaswift/prensa/releases/download/descargas/logotipo.zip', glifo: 'llaves' },
+    { titulo: 'Icono y avatar',   texto: 'La "h" y el avatar redondo para perfiles y apps.',              url: 'https://github.com/holaswift/prensa/releases/download/descargas/icono-y-avatar.zip', glifo: 'enye' },
+    { titulo: 'Logo 3D y glifos', texto: 'El "hola" en tubo 3D y las pegatinas de la comunidad.',         url: 'https://github.com/holaswift/prensa/releases/download/descargas/logo-3d-y-glifos.zip', glifo: 'pregunta' },
+    { titulo: 'Vídeos',           texto: 'La animación del logo en horizontal, vertical y cuadrado.',     url: 'https://github.com/holaswift/prensa/releases/download/descargas/videos.zip', glifo: 'abre' },
+    { titulo: 'Equipo',           texto: 'Fotos y bios de los founders y los embajadores.',                url: 'https://github.com/holaswift/prensa/releases/download/descargas/equipo.zip', glifo: 'mano' },
+  ];
+  // ───────────────────────────────────────────────────────────────────────────
+  const GLIFOS = { arroba: '/assets/img/glifos/arroba.webp', llaves: '/assets/img/glifos/llaves.webp', enye: '/assets/img/glifos/enye.webp', pregunta: '/assets/img/glifos/pregunta.webp', abre: '/assets/img/glifos/abre-interrogacion.webp', mano: '/assets/img/glifos/mano.webp' };
+  const esc = s => s.replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
+  document.getElementById('lista-recursos').innerHTML = RECURSOS.map(r => `
+    <li class="recurso reveal">
+      <img src="${GLIFOS[r.glifo] || GLIFOS.mano}" alt="" aria-hidden="true">
+      <h3>${esc(r.titulo)}</h3>
+      <p>${esc(r.texto)}</p>
+      ${r.url ? `<a class="abrir" href="${esc(r.url)}" download>Descargar ZIP ↓</a>` : '<span class="pronto">Muy pronto</span>'}
+    </li>`).join('');
+  document.getElementById('mail-prensa').innerHTML = EMAIL_PRENSA
+    ? `<a class="mail" href="mailto:${esc(EMAIL_PRENSA)}">${esc(EMAIL_PRENSA)}</a>`
+    : '<span class="mail"><span class="falta">email de prensa</span></span>';
+
+  // barra con línea al bajar; apariciones al hacer scroll
+  const nav = document.querySelector('nav.top');
+  addEventListener('scroll', () => nav.classList.toggle('solida', scrollY > 8), { passive: true });
+  const io = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } }), { rootMargin: '0px 0px -8% 0px' });
+  document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+</script>
+<!-- Cloudflare Web Analytics --><script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "7561489e4dd0451fa2644e23cd72c6c9"}'></script><!-- End Cloudflare Web Analytics -->
+</body>
+</html>

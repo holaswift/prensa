@@ -1,0 +1,34 @@
+name: Descargas
+
+# En cada cambio de main genera un ZIP por carpeta y otro con todo, y los sube a la release "descargas".
+# La página https://holaswift.com/prensa enlaza a:
+#   https://github.com/holaswift/prensa/releases/download/descargas/<carpeta>.zip
+# No cambiéis los nombres de las carpetas o de los ZIP sin cambiar también esos enlaces.
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  zips:
+    runs-on: ubuntu-latest
+    env:
+      GH_TOKEN: ${{ github.token }}
+      GH_REPO: ${{ github.repository }}
+      CARPETAS: nota-de-prensa logotipo icono-y-avatar logo-3d-y-glifos videos equipo
+    steps:
+      - uses: actions/checkout@v4
+      - name: Un ZIP por carpeta y otro con todo
+        run: |
+          mkdir -p _zips
+          for d in $CARPETAS; do zip -qr -X "_zips/$d.zip" "$d" -x '*.DS_Store'; done
+          zip -qr -X _zips/holaswift-prensa.zip $CARPETAS README.md -x '*.DS_Store'
+          ls -lh _zips
+      - name: Subir a la release "descargas"
+        run: |
+          gh release view descargas >/dev/null 2>&1 \
+            || gh release create descargas --title "Descargas" --notes "ZIP del kit de prensa. Se regeneran solos en cada cambio de main: no los subáis a mano."
+          gh release upload descargas _zips/*.zip --clobber
