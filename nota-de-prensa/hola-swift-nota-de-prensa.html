@@ -1,0 +1,73 @@
+<!doctype html><html lang="es"><head><meta charset="utf-8"><title>Nace hola Swift, la comunidad de Swift en español · hola Swift</title><meta name="viewport" content="width=device-width,initial-scale=1"><style>@font-face{font-family:"Inter";src:url(recursos/Inter-Regular.woff2) format("woff2");font-weight:400}@font-face{font-family:"Inter";src:url(recursos/Inter-Medium.woff2) format("woff2");font-weight:500}@font-face{font-family:"Inter";src:url(recursos/Inter-SemiBold.woff2) format("woff2");font-weight:600}@font-face{font-family:"Inter Display";src:url(recursos/InterDisplay-SemiBold.woff2) format("woff2");font-weight:600}@font-face{font-family:"Inter Display";src:url(recursos/InterDisplay-Bold.woff2) format("woff2");font-weight:700}
+/* hola Swift · estilo de la web llevado a A4. Tokens del libro de marca. */
+:root{--fondo:#F7F7F7;--superficie:#FFFFFF;--linea:#E3E3E8;--texto:#111111;--texto-2:#55555F;--texto-3:#6E6E78;--enlace:#0066CC;
+  --t:"Inter Display","Inter",system-ui,sans-serif;--c:"Inter",system-ui,sans-serif}
+@page{size:A4;margin:22mm 20mm 24mm;
+  @bottom-left{content:"hola Swift · Nota de prensa";font:500 7.5pt var(--c);color:#6E6E78}
+  @bottom-right{content:counter(page) " / " counter(pages);font:500 7.5pt var(--c);color:#6E6E78}}
+@page portada{margin:0;@bottom-left{content:none}@bottom-right{content:none}}
+*{box-sizing:border-box}
+html{-webkit-print-color-adjust:exact;print-color-adjust:exact}
+body{margin:0;font:400 10.5pt/1.55 var(--c);color:var(--texto);-webkit-font-smoothing:antialiased}
+a{color:var(--enlace);text-decoration:underline;text-underline-offset:2px;text-decoration-thickness:.5pt}
+code{font:9.5pt ui-monospace,"SF Mono",Menlo,Consolas,monospace;background:var(--fondo);border-radius:4px;padding:0 3px}
+.falta{border:.75pt dashed #A5A5AF;border-radius:4px;padding:0 4px;color:var(--texto-2);white-space:nowrap}
+/* portada a página completa: fondo y retícula de puntos de la web */
+.portada{page:portada;width:210mm;height:297mm;position:relative;overflow:hidden;break-after:page;background:var(--fondo);
+  background-image:radial-gradient(circle at 1.2px 1.2px,#C9C9D1 1px,transparent 1.25px);background-size:6.35mm 6.35mm;background-position:center top;
+  padding:22mm 20mm;display:flex;flex-direction:column}
+.portada .logo{width:44mm;height:auto}
+.portada .arte{margin:auto 0;width:100%;height:auto}
+.portada .ceja{font:600 11pt/1.3 var(--c);color:var(--texto-3);margin:0 0 4mm}
+.portada h1{font:700 40pt/1 var(--t);letter-spacing:-.03em;margin:0}
+.portada .sub{font:400 15pt/1.4 var(--c);color:var(--texto-2);margin:5mm 0 0;max-width:140mm}
+.portada .pie{display:flex;justify-content:space-between;font:500 9pt var(--c);color:var(--texto-3);margin-top:12mm}
+/* cabecera de primera página (sin portada) */
+.cab{display:grid;grid-template-columns:1fr auto;gap:0 10mm;align-items:start;margin-bottom:9mm}
+.cab .logo{width:36mm;height:auto;display:block;margin-bottom:12mm}
+.cab .glifo{width:24mm;height:auto;margin-top:1mm}
+.ceja{font:600 9.5pt/1.3 var(--c);color:var(--texto-3);margin:0 0 3mm}
+.cab .meta{display:flex;gap:4mm;flex-wrap:wrap}
+h1{font:700 27pt/1.05 var(--t);letter-spacing:-.025em;margin:0;text-wrap:balance}
+.sub{font:400 13pt/1.45 var(--c);color:var(--texto-2);margin:4mm 0 0;text-wrap:pretty}
+/* cuerpo */
+h2{font:700 15pt/1.15 var(--t);letter-spacing:-.015em;margin:9mm 0 3mm;break-after:avoid}
+h3{font:600 11.5pt/1.3 var(--t);letter-spacing:-.005em;margin:6mm 0 2mm;break-after:avoid}
+h4{font:600 10.5pt/1.4 var(--c);margin:5mm 0 1mm;break-after:avoid}
+p{margin:0 0 3mm;orphans:3;widows:3}
+ul,ol{margin:0 0 3mm;padding-left:5mm}
+li{margin:0 0 1.2mm}
+li::marker{color:var(--texto-3)}
+.destacado{font:600 14pt/1.35 var(--t);letter-spacing:-.01em;margin:6mm 0}
+.cita{margin:6mm 0;padding:6mm 7mm;background:var(--fondo);border-radius:5mm;break-inside:avoid}
+.cita blockquote{margin:0;font:400 12pt/1.5 var(--c)}
+.cita blockquote p:last-child{margin:0}
+.cita figcaption{margin-top:3mm;font:500 9pt var(--c);color:var(--texto-2)}
+.tarjeta{background:var(--fondo);border-radius:5mm;padding:6mm 7mm;margin:6mm 0;break-inside:avoid}
+.tarjeta>:first-child{margin-top:0}.tarjeta>:last-child{margin-bottom:0}
+.tit-bloque{margin-top:8mm}
+.datos{display:grid;grid-template-columns:1fr 1fr;gap:0 8mm;margin:3mm 0 6mm;break-inside:avoid}
+.datos div{padding:2.6mm 0;border-top:.75pt solid var(--linea)}
+.datos dt{font:500 8pt/1.3 var(--c);letter-spacing:.01em;color:var(--texto-3);margin-bottom:1mm}
+.datos dd{margin:0;font-weight:600}
+.datos .sec{display:block;font-weight:400;color:var(--texto-2);font-size:9.5pt}
+table{width:100%;border-collapse:collapse;margin:3mm 0 6mm;font-size:9.5pt;break-inside:avoid}
+th{text-align:left;font:500 8pt/1.3 var(--c);color:var(--texto-3);padding:0 3mm 2mm 0;border-bottom:.75pt solid var(--linea)}
+td{padding:2.4mm 3mm 2.4mm 0;border-bottom:.75pt solid var(--linea);vertical-align:top}
+.sobre{margin-top:9mm;padding-top:5mm;border-top:.75pt solid var(--linea);font-size:9.5pt;color:var(--texto-2);break-inside:avoid}
+.sobre h3{font:600 10pt/1.3 var(--c);color:var(--texto);margin:0 0 2mm}
+.contacto .ceja{margin-bottom:2mm}
+.contacto p{margin:0 0 1mm}
+.salto{break-after:page}
+.fin{margin-top:8mm;text-align:center;color:var(--texto-3);font-size:9pt}
+</style></head><body data-ceja="Nota de prensa"><header class="cab"><div><img class="logo" src="recursos/logo-horizontal-color.png" alt="hola Swift"><p class="ceja">Nota de prensa · <span class="falta">fecha de lanzamiento</span></p><h1>Nace hola Swift, la comunidad de Swift en español</h1><p class="sub">Quedadas y talleres online, en directo y en español, para quienes crean con Swift y las plataformas de Apple.</p></div><img class="glifo" src="recursos/glifo-arroba.png" alt=""></header><main><p><b>hola Swift</b> nace para reunir a quienes crean apps con Swift y las plataformas de Apple y quieren aprender, compartir y conocerse en su idioma. La comunidad arranca con quedadas y talleres online, en directo y en español, en su servidor de Discord, y prepara un encuentro en persona para verse las caras.</p>
+<p>La impulsan <b>Jon Ander Orcera</b>, Project Manager de Apple Coding Academy, y <b>Alejandro Mohamad</b>, desarrollador de apps para plataformas Apple desde 2014. Les acompaña desde el primer día un grupo de embajadores de la comunidad: desarrolladores indie, ingenieros de iOS, docentes y diseñadores de distintas ciudades.</p>
+<figure class="cita"><blockquote><p>Detrás de cada gran app hay personas. Un iPhone puede ser cristal, metal y silicio. Hasta que alguien imagina algo.</p></blockquote><figcaption>Del manifiesto de hola Swift</figcaption></figure>
+<h2>Qué ofrece</h2>
+<ul><li><b>Quedadas online:</b> charlas de la comunidad, en directo y en español, en Discord. Quien se apunta recibe el enlace antes de cada sesión.</li><li><b>Talleres:</b> sesiones prácticas sobre Swift, SwiftUI y el ecosistema de Apple, impartidas por personas de la comunidad.</li><li><b>Un encuentro en persona,</b> en preparación, para conocerse fuera de la pantalla.</li><li><b>Un sitio donde preguntar</b> y compartir lo que cada uno está construyendo, desde quien empieza hasta quien publica en la App Store.</li></ul>
+<figure class="cita"><blockquote><p><span class="falta">Cita de Jon Ander Orcera o de Alejandro Mohamad sobre por qué nace hola Swift</span></p></blockquote><figcaption><span class="falta">Nombre</span>, founder de hola Swift</figcaption></figure>
+<h2>Cómo unirse</h2>
+<p>Quien quiera participar puede apuntarse en <b>holaswift.com</b> con su email. Recibirá el aviso del lanzamiento, el acceso a la comunidad en Discord y las fechas de cada quedada. Las empresas que quieran apoyar a la comunidad pueden escribir desde la misma web.</p>
+<h3 class="tit-bloque">Datos rápidos</h3><dl class="datos"><div><dt>Nombre</dt><dd>hola Swift<span class="sec">Dos palabras, "hola" en minúscula y "Swift" con mayúscula</span></dd></div><div><dt>Qué es</dt><dd>La comunidad de Swift en español</dd></div><div><dt>Founders</dt><dd>Jon Ander Orcera y Alejandro Mohamad</dd></div><div><dt>Embajadores</dt><dd>7 personas de la comunidad</dd></div><div><dt>Formato</dt><dd>Quedadas y talleres online, en directo<span class="sec">En Discord. Encuentro en persona en preparación</span></dd></div><div><dt>Web y redes</dt><dd>holaswift.com · @hola_swift</dd></div></dl>
+<div class="sobre"><h3>Sobre hola Swift</h3><p>hola Swift es la comunidad de Swift en español: un sitio para quienes crean con Swift y las plataformas de Apple y quieren aprender, compartir y conocerse en su idioma. Organiza quedadas y talleres online en Discord y prepara un encuentro en persona. Es una comunidad independiente, sin relación oficial con Apple Inc. Swift y Apple son marcas de Apple Inc.</p></div>
+<div class="tarjeta contacto"><p class="ceja">Contacto de prensa</p><p><b>Jon Ander Orcera y Alejandro Mohamad</b>, founders de hola Swift</p><p><b>prensa@holaswift.com</b></p><p>Logotipos, imágenes y vídeos: <b>holaswift.com/prensa</b></p></div><p class="fin">###</p></main></body></html>
